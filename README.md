@@ -1,14 +1,64 @@
 # Cosmic Trade-off — NASA Space Mission Design & Flight Operations Lab
 
-> **Aerospace Engineering Trade-off Simulator & Interactive Astrodynamics Operations Cockpit**  
-> Built for the **NASA International Space Apps Challenge** / Global Deep Space Hackathon.
+<div align="center">
 
-[![React 18](https://img.shields.io/badge/React-18.3-61dafb.svg?style=for-the-badge&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6.svg?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.1-646cff.svg?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8.svg?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
-[![Web Audio API](https://img.shields.io/badge/Audio-Web_Audio_Synth-f59e0b.svg?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-[![Zero Window Scroll](https://img.shields.io/badge/UX-Single--Screen_100vh-10b981.svg?style=for-the-badge)](https://github.com/barnabas47/Cosmic-Trade-off)
+<!-- Sweetbanner-Inspired Animated Interactive SVG Banner -->
+<a href="https://github.com/barnabas47/Cosmic-Trade-off">
+  <img src="docs/assets/animated_sweetbanner.svg" alt="Cosmic Trade-off Animated Banner" width="100%" />
+</a>
+
+<br/>
+
+<p align="center">
+  <b>Where deep-space astrodynamics meets high-stakes aerospace trade-off engineering.</b><br/>
+  An interactive, zero-scroll mission design laboratory &amp; real-time flight operations cockpit.
+</p>
+
+<p align="center">
+  <a href="https://github.com/barnabas47/Cosmic-Trade-off/stargazers"><img src="https://img.shields.io/github/stars/barnabas47/Cosmic-Trade-off?style=for-the-badge&logo=star&color=00f2fe&logoColor=00f2fe&labelColor=060f1a" alt="Stars" /></a>
+  <a href="https://github.com/barnabas47/Cosmic-Trade-off/releases"><img src="https://img.shields.io/github/v/release/barnabas47/Cosmic-Trade-off?style=for-the-badge&logo=github&color=00f2fe&logoColor=00f2fe&labelColor=060f1a" alt="Release" /></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18.3-060f1a?style=for-the-badge&logo=react&logoColor=00f2fe&labelColor=060f1a" alt="React" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.7-060f1a?style=for-the-badge&logo=typescript&logoColor=00f2fe&labelColor=060f1a" alt="TypeScript" /></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-6.1-060f1a?style=for-the-badge&logo=vite&logoColor=00f2fe&labelColor=060f1a" alt="Vite" /></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-3.4-060f1a?style=for-the-badge&logo=tailwindcss&logoColor=00f2fe&labelColor=060f1a" alt="Tailwind" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00f2fe?style=for-the-badge&logoColor=060f1a&labelColor=060f1a" alt="License" /></a>
+</p>
+
+<p align="center">
+  <a href="#-the-problem-the-planetary-exploration-trilemma">The Problem</a> •
+  <a href="#-interactive-blueprint-engineering-lab">Blueprint Lab</a> •
+  <a href="#-flight-director-operations--in-flight-interventions">Flight Director</a> •
+  <a href="#-core-technical-innovations--interactive-minigames">5 Minigames</a> •
+  <a href="#-system-architecture--astrodynamic-pipeline">Architecture</a> •
+  <a href="#-quickstart--local-setup">Quickstart</a>
+</p>
+
+</div>
+
+---
+
+### 📟 Terminal Astrodynamics Readout
+
+```ascii
++---------------------------------------------------------------------------------------------------+
+|  [NASA-JPL] DEEP SPACE ASTRODYNAMICS MATRIX                          SOLAR RAD: 39.3 W/m² (EUROPA) |
++---------------------------------------------------------------------------------------------------+
+|                                                                                                   |
+|               .---.                 _..._                                                         |
+|             .'     '.             .'     '.                                                       |
+|            /  EARTH  \           /  MARS   \                .--------.                            |
+|           |  1.0 AU   |         |  1.52 AU  |              /  EUROPA  \                           |
+|            \         /           \         /              |   5.2 AU   |                          |
+|             '.     .'             '.     .'                \          /                           |
+|               '---'                 '---'                   '--------'                            |
+|                 \                     \                          ^                                |
+|                  \                     \                         |                                |
+|                   `---> [HOHMANN] ------> [GRAVITY ASSIST] ------' [INSERTION]                    |
+|                         Δv = 4.2 km/s      Oberth Boost +1.8 km/s   Rp = 160 km                   |
+|                                                                                                   |
+|   MET: T+493D  |  PROPELLANT: 1980 kg (74%)  |  COMM LOCK: X-BAND 128 kbps  |  BUS TEMP: 292 K   |
++---------------------------------------------------------------------------------------------------+
+```
 
 ---
 
@@ -75,13 +125,13 @@ Airlines and space agencies face three systemic physical barriers:
 |---|---|:---:|---|
 | **Transonic Max-Q Ascent** | Throttle slider keeping dynamic aerodynamic pressure within the 65%–75% safe pocket through Mach 1. | ![Max-Q](docs/assets/minigame_max_q.png) | Protects payload fairing from acoustic resonance collapse; awards +100 XP. |
 | **Gravity Assist Slingshot** | Precision periapsis altitude gauge targeting the hyperbolic flyby corridor (140–180 km). | ![Gravity Assist](docs/assets/minigame_gravity_assist.png) | **+1.82 km/s Delta-V boost** with 0 kg fuel expended. |
-| **Solar Array Sun Gimbal** | 2-axis polar radar aligning photovoltaic panels with the solar vector. | *Interactive* | **+650W Bus Power**, replenishing emergency storage cells. |
-| **DSN Phase Lock Synthesizer** | Live FFT oscilloscope matching carrier frequency and phase to pierce cosmic noise. | *Interactive* | **+18.5 GB Science downlinked** over deep-space carrier. |
-| **RCS Gyro Desaturation** | Attitude horizon stabilization pulsing 4 cold-gas thrusters to bleed reaction wheel RPM below 15%. | *Interactive* | Saves propellant and protects gyroscopes from structural redline. |
+| **Solar Array Sun Gimbal** | 2-axis polar radar aligning photovoltaic panels with the solar vector. | *Interactive Polar Radar* | **+650W Bus Power**, replenishing emergency storage cells. |
+| **DSN Phase Lock Synthesizer** | Live FFT oscilloscope matching carrier frequency and phase to pierce cosmic noise. | *Interactive Wave Oscilloscope* | **+18.5 GB Science downlinked** over deep-space carrier. |
+| **RCS Gyro Desaturation** | Attitude horizon stabilization pulsing 4 cold-gas thrusters to bleed reaction wheel RPM below 15%. | *Interactive 3D Horizon Sphere* | Saves propellant and protects gyroscopes from structural redline. |
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+## 🏗️ System Architecture & Astrodynamic Pipeline
 
 ```mermaid
 flowchart TD
@@ -155,6 +205,7 @@ Cosmic-Trade-off/
 │   └── stitch_screen.png        # Viewport reference asset
 ├── docs/
 │   └── assets/                  # High-resolution screenshots & game HUD captures
+│       ├── animated_sweetbanner.svg  # Interactive animated SVG header banner
 │       ├── blueprint_lab_3d.png
 │       ├── flight_director_sim.png
 │       ├── directive_decision_modal.png

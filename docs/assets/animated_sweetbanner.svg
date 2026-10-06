@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Dark Cosmic Background Gradients -->
+    <radialGradient id="spaceGlow" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#071b2e" />
+      <stop offset="45%" stop-color="#040d1a" />
+      <stop offset="100%" stop-color="#020509" />
+    </radialGradient>
+
+    <!-- Aurora Nebulae Gradients -->
+    <radialGradient id="cyanOrb" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="violetOrb" cx="80%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#9d4edd" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#9d4edd" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glowing Text Linear Gradients -->
+    <linearGradient id="neonCyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#00f2fe" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="orbitStrokeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#9d4edd" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Celestial Sun Glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#fef08a" />
+      <stop offset="70%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="jupiterGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="50%" stop-color="#c2410c" />
+      <stop offset="100%" stop-color="#431407" />
+    </radialGradient>
+
+    <!-- Filter Glows -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.04); }
+      }
+      @keyframes orbitSpin {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -1200; }
+      }
+      @keyframes shipFly {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(8px, -6px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes blinkCursor {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 0.9; }
+      }
+
+      .star-1 { animation: starTwinkle 3s ease-in-out infinite; }
+      .star-2 { animation: starTwinkle 4.5s ease-in-out infinite 1.2s; }
+      .star-3 { animation: starTwinkle 2.2s ease-in-out infinite 0.7s; }
+      .orbit-line { animation: orbitSpin 35s linear infinite; }
+      .pulsing-orb { animation: pulseGlow 6s ease-in-out infinite; }
+      .ship-float { animation: shipFly 5s ease-in-out infinite; }
+      .cursor { animation: blinkCursor 1s infinite; }
+    </style>
+  </defs>
+
+  <!-- Deep Canvas Background -->
+  <rect width="100%" height="100%" fill="url(#spaceGlow)" rx="16" />
+
+  <!-- Aurora Nebulae Clouds -->
+  <circle cx="240" cy="120" r="320" fill="url(#cyanOrb)" class="pulsing-orb" />
+  <circle cx="980" cy="280" r="360" fill="url(#violetOrb)" class="pulsing-orb" style="animation-delay: -3s;" />
+
+  <!-- Tech Perspective Grid Lines -->
+  <g stroke="rgba(0, 242, 254, 0.05)" stroke-width="1">
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="380" x2="1200" y2="380" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <!-- Radiating Perspective Lines -->
+    <line x1="600" y1="180" x2="100" y2="420" />
+    <line x1="600" y1="180" x2="300" y2="420" />
+    <line x1="600" y1="180" x2="500" y2="420" />
+    <line x1="600" y1="180" x2="700" y2="420" />
+    <line x1="600" y1="180" x2="900" y2="420" />
+    <line x1="600" y1="180" x2="1100" y2="420" />
+  </g>
+
+  <!-- Twinkling Star Field -->
+  <g fill="#ffffff">
+    <circle cx="85" cy="45" r="1.2" class="star-1" />
+    <circle cx="160" cy="110" r="1.5" class="star-2" />
+    <circle cx="290" cy="55" r="0.8" class="star-3" />
+    <circle cx="420" cy="80" r="1.3" class="star-1" />
+    <circle cx="530" cy="30" r="1.0" class="star-2" />
+    <circle cx="710" cy="65" r="1.6" class="star-3" />
+    <circle cx="830" cy="40" r="0.9" class="star-1" />
+    <circle cx="950" cy="95" r="1.4" class="star-2" />
+    <circle cx="1080" cy="60" r="1.1" class="star-3" />
+    <circle cx="1140" cy="140" r="1.5" class="star-1" />
+    <circle cx="70" cy="220" r="1.0" class="star-2" />
+    <circle cx="140" cy="310" r="1.4" class="star-3" />
+    <circle cx="1060" cy="210" r="1.2" class="star-1" />
+    <circle cx="1120" cy="320" r="0.9" class="star-2" />
+  </g>
+
+  <!-- Dynamic Keplerian Orbit Rings (Background Astrodynamics) -->
+  <g transform="translate(600, 195)">
+    <!-- Sol Core -->
+    <circle cx="0" cy="0" r="32" fill="url(#sunGlow)" filter="url(#heavyGlow)" />
+    <circle cx="0" cy="0" r="10" fill="#ffffff" />
+
+    <!-- Earth Keplerian Orbit Ellipse -->
+    <ellipse cx="0" cy="0" rx="260" ry="85" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.2" stroke-dasharray="4 6" />
+
+    <!-- Mars Orbit Ellipse -->
+    <ellipse cx="25" cy="-8" rx="390" ry="125" fill="none" stroke="rgba(251, 146, 60, 0.22)" stroke-width="1.2" stroke-dasharray="6 8" />
+
+    <!-- Jupiter / Europa Outer Conic Orbit -->
+    <ellipse cx="-40" cy="15" rx="520" ry="165" fill="none" stroke="rgba(192, 132, 252, 0.2)" stroke-width="1.4" />
+
+    <!-- Hyperbolic Slingshot Transfer Arc (Animated Dash) -->
+    <path d="M -260,0 C -120,-160 160,-140 380,-35 C 440, -5 490, 45 520, 80" 
+          fill="none" stroke="url(#neonCyanGrad)" stroke-width="3" stroke-dasharray="14 10" class="orbit-line" filter="url(#glow)" />
+
+    <!-- Earth Planet Node -->
+    <g transform="translate(-260, 0)">
+      <circle cx="0" cy="0" r="7" fill="#38bdf8" filter="url(#glow)" />
+      <circle cx="0" cy="0" r="11" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.6" />
+      <text x="14" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#38bdf8" font-weight="bold">EARTH [1.0 AU]</text>
+    </g>
+
+    <!-- Mars Planet Node -->
+    <g transform="translate(390, -42)">
+      <circle cx="0" cy="0" r="6" fill="#fb923c" filter="url(#glow)" />
+      <text x="12" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fb923c" font-weight="bold">MARS [1.52 AU]</text>
+    </g>
+
+    <!-- Jupiter & Europa Planet Node -->
+    <g transform="translate(480, 80)">
+      <circle cx="0" cy="0" r="22" fill="url(#jupiterGlow)" filter="url(#glow)" />
+      <!-- Jupiter atmospheric bands -->
+      <path d="M -20,-6 Q 0,-3 20,-6" stroke="#ea580c" stroke-width="2" fill="none" opacity="0.7" />
+      <path d="M -21,5 Q 0,8 21,5" stroke="#7c2d12" stroke-width="2.5" fill="none" opacity="0.8" />
+      <!-- Europa Moon Orbiting -->
+      <circle cx="34" cy="-14" r="4.5" fill="#e0fdff" filter="url(#glow)" />
+      <text x="44" y="-10" font-family="'JetBrains Mono', monospace" font-size="10" fill="#e0fdff" font-weight="bold">EUROPA [5.2 AU]</text>
+    </g>
+
+    <!-- Probe Satellite Flight Model (Floating along arc) -->
+    <g transform="translate(80, -115)" class="ship-float">
+      <!-- Thruster Plume Particles -->
+      <polygon points="-16,0 -34,-5 -28,0 -34,5" fill="#00f2fe" opacity="0.8" filter="url(#glow)" />
+      <polygon points="-14,0 -22,-2 -20,0 -22,2" fill="#ffffff" />
+      <!-- Spacecraft Bus Body -->
+      <rect x="-8" y="-7" width="16" height="14" rx="2" fill="#e2e8f0" stroke="#00f2fe" stroke-width="1.2" />
+      <!-- Blue Photovoltaic Solar Wings -->
+      <rect x="-24" y="-4" width="14" height="8" rx="1" fill="#0284c7" stroke="#38bdf8" stroke-width="0.8" />
+      <rect x="10" y="-4" width="14" height="8" rx="1" fill="#0284c7" stroke="#38bdf8" stroke-width="0.8" />
+      <!-- High Gain Parabolic Dish -->
+      <path d="M 6,-10 Q 12,-4 6,2" stroke="#ffffff" stroke-width="1.5" fill="none" />
+      <!-- Leader Vector Line -->
+      <line x1="0" y1="8" x2="22" y2="28" stroke="#00f2fe" stroke-width="1" stroke-dasharray="2 2" />
+      <!-- Telemetry Box -->
+      <rect x="24" y="18" width="150" height="22" rx="4" fill="rgba(6, 15, 26, 0.9)" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1" />
+      <text x="32" y="33" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f2fe" font-weight="bold">PROBE-1 [V=32.4 km/s]</text>
+    </g>
+  </g>
+
+  <!-- Top Telemetry Header Strip -->
+  <g transform="translate(40, 36)">
+    <!-- NASA JPL Badge -->
+    <rect x="0" y="0" width="128" height="26" rx="13" fill="rgba(0, 242, 254, 0.12)" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1" />
+    <circle cx="14" cy="13" r="4" fill="#00f2fe" filter="url(#glow)" />
+    <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00f2fe" font-weight="bold" letter-spacing="1.5">NASA JPL LAB</text>
+
+    <!-- Hackathon Track Pill -->
+    <rect x="140" y="0" width="220" height="26" rx="13" fill="rgba(157, 78, 221, 0.15)" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1" />
+    <text x="154" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#c084fc" font-weight="bold">SPACE APPS CHALLENGE</text>
+
+    <!-- Live Telemetry Coordinates -->
+    <text x="1120" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#64748b" letter-spacing="1">
+      SYS: <tspan fill="#38bdf8">KEPLER-3D</tspan> | MET: <tspan fill="#ffffff">T+493D</tspan> | LOCK: <tspan fill="#4ade80">X-BAND 100%</tspan>
+    </text>
+  </g>
+
+  <!-- Center Editorial Hero Title -->
+  <g transform="translate(60, 135)">
+    <!-- Main Neon Display Font -->
+    <text x="0" y="0" font-family="'Inter', -apple-system, sans-serif" font-weight="900" font-size="52" fill="url(#neonCyanGrad)" letter-spacing="-1.5" filter="url(#glow)">
+      COSMIC TRADE-OFF
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="2" y="32" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="16" fill="#94a3b8" letter-spacing="3.5">
+      NASA DEEP SPACE MISSION DESIGN &amp; FLIGHT LAB
+    </text>
+
+    <!-- Live Terminal Prompt Feature Badges -->
+    <g transform="translate(2, 65)">
+      <rect x="0" y="0" width="168" height="28" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1" />
+      <text x="12" y="18" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">⚡ 3D Keplerian Engine</text>
+
+      <rect x="180" y="0" width="160" height="28" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(157, 78, 221, 0.3)" stroke-width="1" />
+      <text x="192" y="18" font-family="'JetBrains Mono', monospace" font-size="11" fill="#c084fc">🎮 5 Directives Minigames</text>
+
+      <rect x="352" y="0" width="160" height="28" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(74, 222, 128, 0.3)" stroke-width="1" />
+      <text x="364" y="18" font-family="'JetBrains Mono', monospace" font-size="11" fill="#4ade80">🔊 Web Audio Synthesizer</text>
+
+      <rect x="524" y="0" width="156" height="28" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(251, 146, 60, 0.3)" stroke-width="1" />
+      <text x="536" y="18" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fb923c">🛡️ 100vh Zero-Scroll UI</text>
+    </g>
+  </g>
+
+  <!-- Bottom Metric HUD Readout -->
+  <g transform="translate(60, 375)">
+    <line x1="0" y1="0" x2="1080" y2="0" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1" />
+    <circle cx="0" cy="0" r="3" fill="#00f2fe" />
+    <circle cx="1080" cy="0" r="3" fill="#00f2fe" />
+
+    <text x="0" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">
+      &gt; <tspan fill="#00f2fe">ASTRODYNAMICS SOLVER:</tspan> Δv REQUIRED = 9,100 M/S | SOLAR FLUX @ EUROPA = 39.3 W/M² | PAYLOAD CAPACITY = 12,810 KG
+    </text>
+
+    <!-- Animated Command Prompt Cursor -->
+    <rect x="740" y="13" width="7" height="13" fill="#00f2fe" class="cursor" />
+  </g>
+</svg>
